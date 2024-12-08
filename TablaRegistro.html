@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleParticipante.css">
+    <title>Registro de Participantes </title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="registro">
+            <div class="title">
+                <h2>Registro de participante</h2>
+            </div>
+            <div class="participante">
+            <span>Nombre:</span>
+            <input type="text" id="nombreInput">
+            <button onclick="agregarNombre()" class="btn-add">+</button>
+            </div>
+            <span>Lista de Participantes:</span>
+            <table id="tablaParticipantes">
+                <tr>
+                    <th>Nombre</th>
+                </tr>
+            </table>
+            <button onclick="registrarCargos()" class="btn-register">Registrar Participantes</button>
+        </div>
+    </div>
+    <script>
+        function agregarNombre() {
+            var nombre = document.getElementById('nombreInput').value;
+            var table = document.getElementById('tablaParticipantes');
+            var row = table.insertRow(-1); // Inserta una nueva fila al final de la tabla
+            var cellNombre = row.insertCell(0);
+
+            cellNombre.innerHTML = nombre;
+
+            //Guardamos en localstorage
+            var participantes = JSON.parse(localStorage.getItem('participantes')) || [];
+            participantes.push(nombre);
+            localStorage.setItem('participantes', JSON.stringify(participantes));
+        }
+
+        function registrarCargos() {
+            // Redirigir a InfoBajada.html o realizar otras acciones necesarias
+            window.location.href = "InfoBajada.html";
+        }
+    </script>
+</body>
+</html>

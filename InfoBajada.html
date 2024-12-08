@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleRegistro.css">
+    <title>Bajda de Reyes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Registro de la Familia</h2>
+        </div>
+        <div class="container-hijo glass-efect">
+            <div class="registro">
+                <span>Participantes:</span>
+                <select name="" id="selectParticipantes" class="select-item">
+
+                </select>
+            <span>Animalitos del nacimiento: </span>
+            <select name="animal" id="selectAnimal" class="select-item">
+                <option value="Voluntario">Voluntario</option>
+                <option value="Ninio Jesus">Ninio Jesus</option>
+                <option value="Maria y Jose">Maria y Jose</option>
+                <option value="Melchor">Melchor</option>
+                <option value="Gaspar">Gaspar</option>
+                <option value="Baltazar">Baltazar</option>
+                <option value="Camello 1 M">Camello 1 M</option>
+                <option value="Camello 2 G">Camello 2 G</option>
+                <option value="Camello 3 B">Camello 3 B</option>
+                <option value="Camello 4 Cervecero">Camello 4 Cervecero</option>
+                <option value="Camello 5 Cervecero">Camello 5 Cervecero</option>
+                <option value="Camello 6 Cervecero">Camello 6 Cervecero</option>
+                <option value="Angel Grande">Angel Grande</option>
+                <option value="Angel Chico">Angel Chico</option>
+                <option value="Burro Cervecero">Burro Cervecero</option>
+                <option value="Pastor Grande">Pastor Grande</option>
+                <option value="Pastora">Pastora</option>
+                <option value="Oveja Grande">Oveja Grande</option>
+                <option value="Oveja c/lana gaseosa">Oveja c/lana gaseosa</option>
+                <option value="Burro Chico">Burro Chico</option>
+                <option value="Pollo c/brillo">Pollo c/brillo</option>
+                <option value="Vaca chica gelat">Vaca chica gelat</option>
+                <option value="Vaca chica Cervecera">Vaca chica Cervecera</option>
+                <option value="Pato c/brillo">Pato c/brillo</option>
+                <option value="Oveja c/lana cerveza 1">Oveja c/lana cerveza 1</option>
+                <option value="Burro Grande Plateadp">Burro Grande Plateadp</option>
+                <option value="Vaca Grande">Vaca Grande</option>
+                <option value="Oveja c/lana cerveza 2">Oveja c/lana cerveza 2</option>
+                <option value="Vaca Plateada">Vaca Plateada</option>
+                <option value="Camello chico">Camello chico</option>
+                <option value="Vaca Pequenia">Vaca Pequenia</option>
+                <option value="Burro Mediano plateado">Burro Mediano plateado</option>
+                <option value="Oveja c/lana 3">Oveja c/lana 3</option>
+                <option value="Vaca con cantaros">Vaca con cantaros</option>
+            </select>
+
+            <span>Cargo: </span>
+        <select name="descripcion" id="selectDescripcion" class="select-item">
+            <option value="LLEVAR A LA MISA">LLEVAR A LA MISA</option>
+            <option value="PREPARAR CENA">PREPARAR CENA</option>
+            <option value="6 CERVEZAS NEGRAS">6 CERVEZAS NEGRAS</option>
+            <option value="2 GASEOSAS 3LT">2 GASEOSAS 3LT</option>
+            <option value="2 CERVEZAS">2 CERVEZAS</option>
+            <option value="PIÑATA">PIÑATA</option>
+            <option value="RELLENO SURTIDO">RELLENO SURTIDO</option>
+            <option value="RELLENO CARAMELOS">RELLENO CARAMELOS</option>
+            <option value="4 CERVEZAS">4 CERVEZAS</option>
+            <option value="4 CERVEZAS">4 CERVEZAS</option>
+            <option value="4 CERVEZAS">4 CERVEZAS</option>
+            <option value="50 VASOS DESCARTABLES-CUBIERTOS">50 VASOS DESCARTABLES-CUBIERTOS</option>
+            <option value="2 gaseosas 3Lt">50 VASOS DESCARTABLES-CUBIERTOS</option>
+            <option value="2 CERVEZAS">2 CERVEZAS</option>
+            <option value="2 CERVEZAS">2 CERVEZAS</option>
+            <option value="BOCADITOS">BOCADITOS</option>
+            <option value="1 CERVEZA">1 CERVEZA</option>
+            <option value="1 GASEOSA 3LT">1 GASEOSA 3LT</option>
+            <option value="BALDE DE CHICHA">BALDE DE CHICHA</option>
+            <option value="1 CERVEZA">1 CERVEZA</option>
+            <option value="40 GELATINAS">40 GELATINAS</option>
+            <option value="2 CERVEZAS">2 CERVEZAS</option>
+            <option value="1 CERVEZA">1 CERVEZA</option>
+            <option value="1 CERVEZA NEGRA">1 CERVEZA NEGRA</option>
+            <option value="MEDIA CAJA DE CERVEZA">MEDIA CAJA DE CERVEZA</option>
+            <option value="BOCADITOS">BOCADITOS</option>
+            <option value="1 CERVEZA NEGRA">1 CERVEZA NEGRA</option>
+            <option value="MEDIA CAJA DE CERVEZA">MEDIA CAJA DE CERVEZA</option>
+            <option value="1 CERVEZA">1 CERVEZA</option>
+            <option value="TEQUEÑOS">TEQUEÑOS</option>
+            <option value="1 CAJA CERVEZA">1 CAJA CERVEZA</option>
+            <option value="1 CERVEZA NEGRA">1 CERVEZA NEGRA</option>
+            <option value="ARMAR NACIMIENTO Y ARBOL">ARMAR NACIMIENTO Y ARBOL</option>
+        </select>
+            <span>Precio</span>
+            <input id="inputPrecio" type="number">
+            
+            <span>Detalles Adicionales:</span>
+            <textarea name="" id="detallesTextarea" cols="30" rows="10"></textarea>
+            <div class="btn">
+                <button onclick="registrar()" id="registrarBtn">Registrar</button>
+                <button onclick="verRegistros()" >Ver Registros</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function registrar() {
+        var participante = document.getElementById('selectParticipantes').value;
+        var animal = document.getElementById('selectAnimal').value; 
+        var cargo = document.getElementById('selectDescripcion').value;
+        var precio = document.getElementById('inputPrecio').value;
+        var detalles = document.getElementById('detallesTextarea').value;
+
+        var nuevoRegistro = {
+            participante: participante,
+            animal: animal,
+            cargo: cargo,
+            precio: precio,
+            detalles: detalles
+        };
+
+        var registros = JSON.parse(localStorage.getItem('registros')) || [];
+        registros.push(nuevoRegistro);
+        localStorage.setItem('registros', JSON.stringify(registros));
+
+        alert('Registrado correctamente');
+    };
+            function verRegistros() {
+                window.location.href = 'RegistroTOTAL.html';
+            }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var participantes = JSON.parse(localStorage.getItem('participantes')) || [];
+            //var participantes = JSON.parse(localStorage.removeItem('participantes')) || [];
+            var selectParticipantes = document.getElementById('selectParticipantes');
+            participantes.forEach(function(nombre) {
+                var option = document.createElement('option');
+                option.text = nombre;
+                selectParticipantes.add(option);
+            });
+        });
+    </script>
+</body>
+</html>

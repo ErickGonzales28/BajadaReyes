@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    background: url(https://images.pexels.com/photos/3177002/pexels-photo-3177002.jpeg?cs=srgb&dl=pexels-magda-ehlers-3177002.jpg&fm=jpg) no-repeat 50%;
+    background-size:cover;
+}
+.registro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@font-face {
+    font-family:themillion;
+    src: url(navidad.ttf);
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    font-family: themillion;
+}
+.registro span{
+    font-size: 40px;
+    font-family: themillion;
+}
+.registro input{
+    margin: 20px 0;
+    margin-bottom: 25px;
+    border-radius:40px;
+    padding: 10px;
+    width: 200px;
+    background-color:rgb(165, 161, 157);
+    outline: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.participante .btn-add{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: bisque;
+}
+.participante .btn-add:hover{
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    transition: .3s;
+} 
+table {
+    width: 10%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+th, td {
+    border: 3px solid #000000;
+    text-align: center;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.btn-register{
+    padding: 10px;
+    border-radius: 30px;
+    width: 200px;
+    height: 40px;
+    font-weight:600;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.btn-register:hover{
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    transition: .3s;
+}

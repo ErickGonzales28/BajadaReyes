@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleParticipante.css">
+    <title>Registros</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="registro">
+            <span>Registros</span>
+            <table id="registrosTable" class="tablaParticipantes">
+                <thead>
+                    <tr>
+                        <th>Participante</th>
+                        <th>Animal</th>
+                        <th>Cargo</th>
+                        <th>Precio</th>
+                        <th>Detalles</th>
+                    </tr>
+                </thead>
+                <tbody id="registrosBody">
+                    <!-- Aquí se mostrarán los registros -->
+                </tbody>
+            </table>
+            <p id="sumaPrecios"></p>
+            <button class="btn-register" onclick="descargarRegistros()" class="btn-download">DESCARGAR</button>
+        </div>  
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var registros = JSON.parse(localStorage.getItem('registros')) || [];
+            var registrosBody = document.getElementById('registrosBody');
+            var sumaPreciosElement = document.getElementById('sumaPrecios');
+
+            var sumaPrecios = 0;
+            registros.forEach(function(registro) {
+                var row = registrosBody.insertRow();
+                row.innerHTML = `
+                    <td>${registro.participante}</td>
+                    <td>${registro.animal}</td>
+                    <td>${registro.cargo}</td>
+                    <td>${registro.precio}</td>
+                    <td>${registro.detalles}</td>
+                `;
+                sumaPrecios += parseFloat(registro.precio) || 0;
+            });
+            sumaPreciosElement.textContent = `La suma total es: ${sumaPrecios.toFixed(2)}`;
+        });
+
+        function descargarRegistros() {
+            var registros = JSON.parse(localStorage.getItem('registros')) || [];
+            var texto = '';
+
+            registros.forEach(function(registro) {
+                texto += `Participante: ${registro.participante}, Animal: ${registro.animal}, Cargo: ${registro.cargo}, Precio: ${registro.precio}, Detalles: ${registro.detalles}\n`;
+            });
+
+            var elemento = document.createElement('a');
+            elemento.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(texto));
+            elemento.setAttribute('download', 'registros.txt');
+            elemento.style.display = 'none';
+            document.body.appendChild(elemento);
+            elemento.click();
+            document.body.removeChild(elemento);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
